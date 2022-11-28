@@ -1,0 +1,58 @@
+@import "../../variables";
+.navbar {
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  gap: 3rem;
+  background: #131022;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  .logo,
+  .nav-btns > ul,
+  .right,
+  .mode,
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .nav-btns > ul {
+    gap: 1rem;
+    li {
+      color: $second-color;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
+.right {
+  margin-left: auto;
+  .toggle-btn {
+    width: 3.2rem;
+    height: 1.5rem;
+    border-radius: 30px;
+    background: #6366f1;
+  }
+  button {
+    margin-left: 2rem;
+    background: $base-color;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    border-radius: 0.4rem;
+    padding: 12px 20px;
+    &:hover {
+      background: $hover-color;
+    }
+  }
+}
+
+// #6366f1 - main
+// #4044ee - hover
