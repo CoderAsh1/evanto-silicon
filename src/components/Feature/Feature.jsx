@@ -6,7 +6,7 @@ import four from "../../assets/4.svg";
 
 const Feature = () => {
   return (
-    <div className="feature">
+    <section className="feature">
       <div>
         <img src={one} alt="one" />
         <h4>Light/Dark Mode</h4>
@@ -23,7 +23,7 @@ const Feature = () => {
         <img src={four} alt="four" />
         <h4>Free Lifetime Updates</h4>
       </div>
-    </div>
+    </section>
   );
 };
 

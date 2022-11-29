@@ -37,6 +37,13 @@
     height: 1.5rem;
     border-radius: 30px;
     background: #6366f1;
+    display: flex;
+    .moon {
+      margin-left: auto;
+      rotate: -160deg;
+      margin-top: 3.5px;
+      margin-right: 3px;
+    }
   }
   button {
     margin-left: 2rem;
@@ -45,19 +52,44 @@
     cursor: pointer;
     color: white;
     font-weight: 600;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 0.3rem;
     border-radius: 0.4rem;
-    padding: 10px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 40px;
-    width: 100px;
+    width: 120px;
 
     &:hover {
       background: $hover-color;
     }
   }
+  .menu {
+    display: none;
+  }
 }
 
-// #6366f1 - main
-// #4044ee - hover
+@media screen and (max-width: 990px) {
+  .navbar {
+    .nav-btns,
+    .right > button {
+      display: none;
+    }
+    .menu {
+      display: block;
+      margin-left: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  .navbar {
+    .right > .mode > span {
+      display: none;
+    }
+  }
+}

@@ -1,5 +1,12 @@
 import "./App.scss";
-import { Feature, Hero, Landing, MoreFeature, Navbar } from "./components";
+import {
+  Feature,
+  Footer,
+  Hero,
+  Landing,
+  MoreFeature,
+  Navbar,
+} from "./components";
 
 function App() {
   return (
@@ -10,7 +17,7 @@ function App() {
         <Feature />
         <Landing />
         <MoreFeature />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );

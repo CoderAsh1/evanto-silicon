@@ -1,6 +1,6 @@
 .more-feature {
   margin-top: 3rem;
-  padding: 2rem 0;
+  padding: 2rem 0 7rem 0;
   border-bottom: 1px solid gray;
   h1 {
     text-align: center;
@@ -20,8 +20,10 @@
       align-items: left;
       padding: 1rem;
       border-radius: 0.7rem;
+      transition: translate 0.3s ease;
       &:hover {
         background: rgb(32, 32, 32);
+        translate: 0 -0.5rem;
       }
       img {
         width: 70px;
@@ -30,8 +32,24 @@
         border-radius: 0.7rem;
       }
       p {
-        color: #384a74;
+        color: #4e5157;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .more-feature {
+    .features {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .more-feature {
+    .features {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

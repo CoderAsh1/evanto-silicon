@@ -1,0 +1,71 @@
+@import "../../variables";
+.footer {
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: hidden;
+  h1 {
+    font-size: 3rem;
+  }
+  .input {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 3rem;
+    background: rgb(36, 35, 35);
+    border-radius: 0.5rem;
+    .icon {
+      margin: 0 1rem;
+    }
+    input {
+      flex: 1;
+      height: 100%;
+      border: none;
+      background: inherit;
+      font-size: 1rem;
+    }
+
+    button {
+      color: white;
+      width: 7rem;
+      font-size: 1.2rem;
+      height: 100%;
+      border: none;
+      background: $base-color;
+      border-radius: 0 0.4rem 0.4rem 0;
+    }
+  }
+  p {
+    margin-top: 3rem;
+    color: $second-color;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .footer {
+    text-align: center;
+    h1 {
+      font-size: 1.9rem;
+    }
+    .input {
+      width: 100%;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  .footer {
+    padding: 4rem 0.4rem;
+    .input {
+      input {
+        width: 50%;
+      }
+    }
+  }
+}
