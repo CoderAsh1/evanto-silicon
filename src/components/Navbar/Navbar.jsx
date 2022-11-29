@@ -8,7 +8,6 @@ const Navbar = () => {
           src="https://silicon.madrasthemes.com/wp-content/uploads/2022/01/logo.svg"
           alt="logo"
           width="47px"
-          height="40px"
         />
         <h1>Silicon</h1>
       </div>

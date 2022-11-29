@@ -1,0 +1,32 @@
+@import "../../variables";
+.landing {
+  margin-top: 3rem;
+  padding: 0.5rem;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    color: $second-color;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+  .pages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1.3rem;
+    .item {
+      &:hover h2 {
+        color: $base-color;
+      }
+      h2 {
+        transition: color 0.3s ease;
+        color: $second-color;
+      }
+      img {
+        width: 100%;
+        border-radius: 0.7rem;
+      }
+    }
+  }
+}
