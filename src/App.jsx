@@ -36,7 +36,7 @@ function App() {
       <div className="components">
         <Hero />
         <Feature />
-        <Landing ref={landingRef} onBackClick={handleBackClick} />
+        <Landing />
         <MoreFeature />
         <Footer />
 
