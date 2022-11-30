@@ -5,7 +5,7 @@
   justify-content: space-between;
   padding: 0.4rem;
   overflow: hidden;
-  div {
+  .slide {
     padding: 4rem;
     height: 20rem;
     text-align: center;
@@ -15,6 +15,23 @@
       background: rgb(31, 30, 30);
       translate: 0 -0.3rem;
       transition: translate 0.2s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .feature {
+    .slide {
+      padding: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .feature {
+    padding: 0.1rem;
+    .slide {
+      padding: 0rem;
+      font-size: 1rem;
     }
   }
 }

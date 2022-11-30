@@ -1,4 +1,4 @@
-import { AiOutlineMail } from "react-icons/ai";
+import { AiFillHeart, AiOutlineMail } from "react-icons/ai";
 import "./footer.scss";
 
 const Footer = () => {
@@ -10,7 +10,9 @@ const Footer = () => {
         <input type="email" placeholder="your email" />
         <button>Subscribe</button>
       </div>
-      <p>© All rights reserved. Made with by MadrasThemes</p>
+      <p>
+        © All rights reserved. Made with <AiFillHeart /> by MadrasThemes
+      </p>
     </section>
   );
 };

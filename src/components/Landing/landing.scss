@@ -16,6 +16,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem 1.3rem;
     .item {
+      cursor: pointer;
       &:hover h2 {
         color: $base-color;
       }

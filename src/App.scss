@@ -5,3 +5,23 @@ a {
   text-decoration: none;
   color: white;
 }
+.back-to-top {
+  background: rgba(53, 53, 53, 0.39);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 100;
+  bottom: 1rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.6rem;
+  // animation: bounce ;
+  .arrow {
+    height: 100%;
+    width: 100%;
+  }
+  // display: none;
+}
