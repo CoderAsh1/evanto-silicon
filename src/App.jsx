@@ -22,18 +22,13 @@ function App() {
 
   useEffect(() => {
     window.onscroll = () => {
-      if (document.documentElement.scrollTop > 240) {
+      if (window.scrollY > 240) {
         topRef.current.style.display = "block";
       } else {
         topRef.current.style.display = "none";
       }
     };
   }, []);
-  const landingRef = useRef();
-
-  function handleBackClick() {
-    landingRef.current.scrollIntoView({ behavior: "smooth" });
-  }
 
   return (
     <div className="App">

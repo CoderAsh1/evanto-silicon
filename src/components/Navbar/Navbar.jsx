@@ -1,5 +1,5 @@
 import "./navbar.scss";
-import { AiOutlineDown, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaMoon, FaAngleDown } from "react-icons/fa";
 import { SlMenu } from "react-icons/sl";
 

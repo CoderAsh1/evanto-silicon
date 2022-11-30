@@ -1,12 +1,12 @@
 import "./feature.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/swiper-bundle.css";
-import SwiperCore, { Autoplay } from "swiper";
 import one from "../../assets/1.svg";
 import two from "../../assets/2.svg";
 import three from "../../assets/3.svg";
 import four from "../../assets/4.svg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
 import { useEffect, useState } from "react";
 
 const Feature = () => {
@@ -21,25 +21,7 @@ const Feature = () => {
     return width;
   }
 
-  useEffect(() => {
-    function handleResize() {
-      setWidth(getWindowDimensions());
-      let width = getWindowDimensions();
-      if (width > 1000) {
-        setSlidePerPage(4);
-        setGap(50);
-      } else if (width < 1000 && width > 601) {
-        setSlidePerPage(3);
-        setGap(50);
-      } else if (width < 600 && width > 401) {
-        setSlidePerPage(2);
-        setGap(50);
-      } else if (width < 400) {
-        setSlidePerPage(1);
-        setGap(0);
-      }
-    }
-
+  function handleSlider() {
     let width = getWindowDimensions();
     if (width > 1000) {
       setSlidePerPage(4);
@@ -50,13 +32,19 @@ const Feature = () => {
     } else if (width < 600 && width > 401) {
       setSlidePerPage(2);
       setGap(50);
-    } else if (width < 500) {
+    } else if (width < 400) {
       setSlidePerPage(1);
       setGap(0);
-    } else {
-      setGap(100);
-      setSlidePerPage(4);
     }
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(getWindowDimensions());
+      handleSlider();
+    }
+
+    handleSlider();
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);

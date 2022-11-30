@@ -9,10 +9,10 @@ const Hero = () => {
 
   window.onscroll = () => {
     setTransform((prev) => (prev + window.scrollY) / 30);
-    console.log(window.scrollY);
   };
 
   useEffect(() => {
+    console.log(imgRef);
     imgRef.current.style.translate = `0 -${transform}rem`;
     img2Ref.current.style.translate = `0 +${transform / 2}rem`;
   }, [window.scrollY]);
