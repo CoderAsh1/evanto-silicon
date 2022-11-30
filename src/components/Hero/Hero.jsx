@@ -7,12 +7,11 @@ const Hero = () => {
   let imgRef = useRef(null);
   let img2Ref = useRef(null);
 
-  window.onscroll = () => {
+  window.addEventListener("scroll", () => {
     setTransform((prev) => (prev + window.scrollY) / 30);
-  };
+  });
 
   useEffect(() => {
-    console.log(imgRef);
     imgRef.current.style.translate = `0 -${transform}rem`;
     img2Ref.current.style.translate = `0 +${transform / 2}rem`;
   }, [window.scrollY]);
