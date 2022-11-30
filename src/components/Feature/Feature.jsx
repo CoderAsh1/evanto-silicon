@@ -54,7 +54,7 @@ const Feature = () => {
     <section className="feature">
       <Swiper
         spaceBetween={gap}
-        loop={width.width < 1000 ? true : false}
+        loop={width < 1000 ? true : false}
         autoplay={{
           delay: 1000,
           disableOnInteraction: false,

@@ -53,3 +53,10 @@
     }
   }
 }
+@media screen and (max-width: 490px) {
+  .more-feature {
+    .features {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
