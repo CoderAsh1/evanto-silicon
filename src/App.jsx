@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { AiOutlineArrowUp } from "react-icons/ai";
+import { FaAngleUp } from "react-icons/fa";
 import "./App.scss";
 import {
   Feature,
@@ -13,6 +13,13 @@ import {
 function App() {
   let topRef = useRef();
 
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     window.onscroll = () => {
       if (document.documentElement.scrollTop > 240) {
@@ -20,9 +27,13 @@ function App() {
       } else {
         topRef.current.style.display = "none";
       }
-      // console.log(document.documentElement.scrollTop);
     };
-  }, [document.documentElement.scrollTop]);
+  }, []);
+  const landingRef = useRef();
+
+  function handleBackClick() {
+    landingRef.current.scrollIntoView({ behavior: "smooth" });
+  }
 
   return (
     <div className="App">
@@ -30,11 +41,12 @@ function App() {
       <div className="components">
         <Hero />
         <Feature />
-        <Landing />
+        <Landing ref={landingRef} onBackClick={handleBackClick} />
         <MoreFeature />
         <Footer />
-        <div ref={topRef} className="back-to-top">
-          <AiOutlineArrowUp className="arrow" />
+
+        <div ref={topRef} className="back-to-top" onClick={goToTop}>
+          <FaAngleUp className="arrow" />
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import "./hero.scss";
-import { AiOutlineDown } from "react-icons/ai";
+import { FaAngleDown } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 const Hero = () => {
   let [transform, setTransform] = useState(1);
@@ -8,13 +8,14 @@ const Hero = () => {
   let img2Ref = useRef(null);
 
   window.onscroll = () => {
-    setTransform((prev) => (prev + document.documentElement.scrollTop) / 30);
+    setTransform((prev) => (prev + window.scrollY) / 30);
+    console.log(window.scrollY);
   };
 
   useEffect(() => {
     imgRef.current.style.translate = `0 -${transform}rem`;
     img2Ref.current.style.translate = `0 +${transform / 2}rem`;
-  }, [document.documentElement.scrollTop]);
+  }, [window.scrollY]);
 
   return (
     <section className="hero">
@@ -30,7 +31,7 @@ const Hero = () => {
 
         <a href="#landing">
           <button>
-            <AiOutlineDown />
+            <FaAngleDown />
           </button>
         </a>
         <span>View Landings</span>

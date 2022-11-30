@@ -1,7 +1,6 @@
 import "./navbar.scss";
-import moon from "../../assets/moon.png";
 import { AiOutlineDown, AiOutlineShoppingCart } from "react-icons/ai";
-import { FaMoon } from "react-icons/fa";
+import { FaMoon, FaAngleDown } from "react-icons/fa";
 import { SlMenu } from "react-icons/sl";
 
 const Navbar = () => {
@@ -18,13 +17,13 @@ const Navbar = () => {
       <div className="nav-btns">
         <ul>
           <li>
-            Landings <AiOutlineDown style={{ fontSize: "12px" }} />
+            Landings <FaAngleDown style={{ fontSize: "12px" }} />
           </li>
           <li>
-            Pages <AiOutlineDown style={{ fontSize: "12px" }} />
+            Pages <FaAngleDown style={{ fontSize: "12px" }} />
           </li>
           <li>
-            Portfolio <AiOutlineDown style={{ fontSize: "12px" }} />
+            Portfolio <FaAngleDown style={{ fontSize: "12px" }} />
           </li>
           <li>Portfolio</li>
           <li>Docs</li>
