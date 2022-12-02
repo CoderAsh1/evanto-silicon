@@ -2,7 +2,7 @@ import "./landing.scss";
 
 const Landing = () => {
   return (
-    <section className="landing" id="landing">
+    <section className="landing">
       <h1>Landing Pages</h1>
       <p>Choose from pre-built layouts of our unique landing pages</p>
 

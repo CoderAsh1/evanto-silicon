@@ -30,13 +30,21 @@ function App() {
     };
   }, []);
 
+  let loadingRef = useRef(null);
+
+  function handleScroll() {
+    loadingRef.current?.scrollIntoView();
+  }
+
   return (
     <div className="App">
       <Navbar />
       <div className="components">
-        <Hero />
+        <Hero handleScroll={handleScroll} />
         <Feature />
-        <Landing />
+        <div ref={loadingRef}>
+          <Landing />
+        </div>
         <MoreFeature />
         <Footer />
 

@@ -1,7 +1,7 @@
 import "./hero.scss";
 import { FaAngleDown } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
-const Hero = () => {
+const Hero = ({ handleScroll }) => {
   let [transform, setTransform] = useState(1);
 
   let imgRef = useRef(null);
@@ -28,11 +28,9 @@ const Hero = () => {
           />
         </div>
 
-        <a href="#landing">
-          <button>
-            <FaAngleDown />
-          </button>
-        </a>
+        <button onClick={handleScroll}>
+          <FaAngleDown />
+        </button>
         <span>View Landings</span>
       </div>
       <div className="middle">
