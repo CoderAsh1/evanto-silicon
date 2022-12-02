@@ -28,10 +28,10 @@ const Feature = () => {
       setGap(50);
     } else if (width < 1000 && width > 601) {
       setSlidePerPage(3);
-      setGap(50);
+      setGap(30);
     } else if (width < 600 && width > 401) {
       setSlidePerPage(2);
-      setGap(50);
+      setGap(20);
     } else if (width < 400) {
       setSlidePerPage(1);
       setGap(0);
@@ -83,22 +83,3 @@ const Feature = () => {
 };
 
 export default Feature;
-
-// Import Swiper React components
-
-// export default () => {
-//   return (
-//     <Swiper
-//       spaceBetween={50}
-//       slidesPerView={3}
-//       onSlideChange={() => console.log('slide change')}
-//       onSwiper={(swiper) => console.log(swiper)}
-//     >
-//       <SwiperSlide>Slide 1</SwiperSlide>
-//       <SwiperSlide>Slide 2</SwiperSlide>
-//       <SwiperSlide>Slide 3</SwiperSlide>
-//       <SwiperSlide>Slide 4</SwiperSlide>
-//       ...
-//     </Swiper>
-//   );
-// };

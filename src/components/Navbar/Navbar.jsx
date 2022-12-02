@@ -7,7 +7,9 @@ import { useState } from "react";
 const Navbar = () => {
   const [isMobileView, setIsMobileView] = useState(false);
 
-  window.addEventListener("click", () => setIsMobileView(false));
+  window.addEventListener("click", () => {
+    setIsMobileView(false);
+  });
 
   return (
     <section className="navbar">

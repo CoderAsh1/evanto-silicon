@@ -26,6 +26,8 @@
       border: none;
       background: inherit;
       font-size: 1rem;
+      outline: none;
+      color: white;
     }
 
     button {
@@ -36,6 +38,10 @@
       border: none;
       background: $base-color;
       border-radius: 0 0.4rem 0.4rem 0;
+      cursor: pointer;
+      &:hover {
+        background: $hover-color;
+      }
     }
   }
   p {
