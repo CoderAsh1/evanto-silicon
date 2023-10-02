@@ -37,6 +37,7 @@ const Feature = () => {
       setGap(0);
     }
   }
+  
 
   useEffect(() => {
     function handleResize() {
